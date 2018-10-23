@@ -1,0 +1,19 @@
+<h1>Pages#new</h1>
+<!-- <p>Find me in app/views/pages/new.html.erb</p> -->
+
+<h3>
+  <% @letters.each do |letter| %>
+  <div class="card">
+    <%= letter %>
+  </div>
+  <% end %>
+</h3>
+
+<h2>
+  What is the longest word you can find?
+</h2>
+
+<form action="/score" method="post">
+  <input type="text" name="question" placeholder="Write the longest word">
+  <input type="submit" value="Submit">
+</form>
